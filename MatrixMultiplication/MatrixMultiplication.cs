@@ -361,64 +361,7 @@ namespace Problem
 
 
 
-                #region UnUsed Code
-                #region Strassen with Threading
-                //Thread[] threads = new Thread[7];
-                //threads[0] = new Thread(() => { P1 = Strassen(DivMat1[0], MatrixCombine(DivMat2[1], DivMat2[3], N / 2, 1), N / 2); });
-
-                //threads[1] = new Thread(() => { P2 = Strassen(MatrixCombine(DivMat1[0], DivMat1[1], N / 2, 0), DivMat2[3], N / 2); });
-
-                //threads[2] = new Thread(() => { P3 = Strassen(MatrixCombine(DivMat1[2], DivMat1[3], N / 2, 0), DivMat2[0], N / 2); });
-
-                //threads[3] = new Thread(() => { P4 = Strassen(DivMat1[3], MatrixCombine(DivMat2[2], DivMat2[0], N / 2, 1), N / 2); });
-
-                //threads[4] = new Thread(() => { P5 = Strassen(MatrixCombine(DivMat1[0], DivMat1[3], N / 2, 0), MatrixCombine(DivMat2[0], DivMat2[3], N / 2, 0), N / 2); });
-                //threads[5] = new Thread(() => { P6 = Strassen(MatrixCombine(DivMat1[1], DivMat1[3], N / 2, 1), MatrixCombine(DivMat2[2], DivMat2[3], N / 2, 0), N / 2); });
-                //threads[6] = new Thread(() => { P7 = Strassen(MatrixCombine(DivMat1[0], DivMat1[2], N / 2, 1), MatrixCombine(DivMat2[0], DivMat2[1], N / 2, 0), N / 2); });
-
-                //for (int i = 0; i < 7; i++)
-                //{
-                //    threads[i].Start();
-                //}
-
-                //for (int i = 0; i < 7; i++)
-                //{
-                //    threads[i].Join();
-                //}
-                #endregion
-
-                #region Strassen Without Threading
-                //P1 = Strassen(DivMat1[0], MatrixCombine(DivMat2[1], DivMat2[3], N / 2, 1), N / 2);
-                //P2 = Strassen(MatrixCombine(DivMat1[0], DivMat1[1], N / 2, 0), DivMat2[3], N / 2);
-                //P3 = Strassen(MatrixCombine(DivMat1[2], DivMat1[3], N / 2, 0), DivMat2[0], N / 2);
-                //P4 = Strassen(DivMat1[3], MatrixCombine(DivMat2[2], DivMat2[0], N / 2, 1), N / 2);
-
-                //P5 = Strassen(MatrixCombine(DivMat1[0], DivMat1[3], N / 2, 0), MatrixCombine(DivMat2[0], DivMat2[3], N / 2, 0), N / 2);
-                //P6 = Strassen(MatrixCombine(DivMat1[1], DivMat1[3], N / 2, 1), MatrixCombine(DivMat2[2], DivMat2[3], N / 2, 0), N / 2);
-                //P7 = Strassen(MatrixCombine(DivMat1[0], DivMat1[2], N / 2, 1), MatrixCombine(DivMat2[0], DivMat2[1], N / 2, 0), N / 2);
-                #endregion
-
-                #region Regular Cobination
-                //tmpA = MatrixCombine(P4, P2, N / 2, 1);
-                //tmpD = MatrixCombine(MatrixCombine(P5, P3, N / 2, 1), P7, N / 2, 1);
-                //A = MatrixCombine(MatrixCombine(P5, tmpA, N / 2, 0), P6, N / 2, 0);
-                //B = MatrixCombine(P1, P2, N / 2, 0);
-                //C = MatrixCombine(P3, P4, N / 2, 0);
-                //D = MatrixCombine(P1, tmpD, N / 2, 0);
-                #endregion
-
-                #region Print each Quarter
-                //Console.WriteLine("\nMatrix A = \n");
-                //PrintMat(A);
-                //Console.WriteLine("\nMatrix B = \n");
-                //PrintMat(B);
-                //Console.WriteLine("\nMatrix C = \n");
-                //PrintMat(C);
-                //Console.WriteLine("\nMatrix D = \n");
-                //PrintMat(D);
-                //Console.WriteLine();
-                #endregion
-                #endregion
+                
 
 
                 for (int i = 0; i < N / 2; i++)
