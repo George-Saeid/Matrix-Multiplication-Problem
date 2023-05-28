@@ -283,9 +283,9 @@ namespace Problem
 
             else
             {
-                //DivMat1 = MatrixDiv(M1, N);
-                //DivMat2 = MatrixDiv(M2, N);
+                
 
+                //Divide Step
                 #region Divsion With Tasks
                 Task[] DivTask = new Task[2];
                 DivTask[0] = Task.Run(() =>
@@ -303,6 +303,8 @@ namespace Problem
                 }
                 #endregion
 
+
+                //Conquer Step
                 #region Strassen with Tasks
                 Task[] tasks = new Task[7];
                 tasks[0] = Task.Run(() => { P1 = Strassen(DivMat1[0], MatrixCombine(DivMat2[1], DivMat2[3], N / 2, 1), N / 2); });
@@ -335,6 +337,7 @@ namespace Problem
                 }
 
 
+                //Combine Step
                 Task[] taskC = new Task[4];
                 taskC[0] = Task.Run(() => { A = MatrixCombine(MatrixCombine(P5, tmpA, N / 2, 0), P6, N / 2, 0); });
                 taskC[1] = Task.Run(() =>
